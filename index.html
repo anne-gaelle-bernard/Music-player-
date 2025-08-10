@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎵Music Player</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="animated-bg"></div>
+<div class="color-overlay" id="colorOverlay"></div>
+
+<div class="app-container">
+  <!-- Header -->
+  <div class="header-section">
+    <h1 class="main-title">🎵 Music Player</h1>
+    <p class="main-subtitle">
+      Découvrez et écoutez vos chansons préférées avec une expérience musicale immersive et moderne
+    </p>
+  </div>
+  
+  <!-- Main Container -->
+  <div class="player-container">
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+      <!-- Search Section -->
+      <div class="search-section">
+        <div class="search-tip">
+          🎯 Recherchez vos artistes ou chansons favorites !
+        </div>
+        
+        <div class="search-controls">
+          <input 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Ex: Ed Sheeran, Dua Lipa, The Weeknd..."
+          />
+          <button id="searchButton" class="search-btn">Rechercher</button>
+        </div>
+        
+        <div class="genre-tags">
+          <div class="genre-tag" data-genre="pop">Pop</div>
+          <div class="genre-tag" data-genre="rock">Rock</div>
+          <div class="genre-tag" data-genre="hip-hop">Hip-Hop</div>
+          <div class="genre-tag" data-genre="electronic">Électronique</div>
+          <div class="genre-tag" data-genre="jazz">Jazz</div>
+          <div class="genre-tag" data-genre="classical">Classique</div>
+        </div>
+      </div>
+      
+      <!-- Album Art -->
+      <div class="album-section">
+        <div class="vinyl-container">
+          <div class="vinyl-disc" id="vinylDisc">
+            <div class="album-artwork" id="albumArt"></div>
+          </div>
+        </div>
+        
+        <div class="visualizer" id="visualizer">
+          <div class="visualizer-bar"></div>
+          <div class="visualizer-bar"></div>
+          <div class="visualizer-bar"></div>
+          <div class="visualizer-bar"></div>
+          <div class="visualizer-bar"></div>
+          <div class="visualizer-bar"></div>
+          <div class="visualizer-bar"></div>
+          <div class="visualizer-bar"></div>
+        </div>
+      </div>
+      
+      <!-- Track Info -->
+      <div class="track-info">
+        <div id="trackTitle" class="track-title">Explorez la Musique</div>
+        <div id="trackArtist" class="track-artist">Commencez par une recherche</div>
+      </div>
+      
+      <!-- Audio Element -->
+      <audio id="audioPlayer"></audio>
+      
+      <!-- Progress -->
+      <div class="progress-section">
+        <div class="time-info">
+          <span id="currentTime">0:00</span>
+          <span id="totalDuration">0:00</span>
+        </div>
+        <div class="progress-track" id="progressTrack">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+      
+      <!-- Controls -->
+      <div class="player-controls">
+        <button class="control-button" id="shuffleBtn" title="Aléatoire">🔀</button>
+        <button class="control-button" id="previousBtn" title="Précédent">⏮</button>
+        <button class="control-button play-button" id="playBtn" title="Lecture/Pause">▶</button>
+        <button class="control-button" id="nextBtn" title="Suivant">⏭</button>
+        <button class="control-button" id="repeatBtn" title="Répétition">🔁</button>
+      </div>
+      
+      <!-- Volume Control -->
+      <div class="volume-section">
+        <span style="font-size: 1.2rem;">🔊</span>
+        <input type="range" id="volumeControl" class="volume-slider" min="0" max="100" value="50">
+        <span id="volumeDisplay">50%</span>
+      </div>
+    </div>
+    
+    <!-- Playlist -->
+    <div class="playlist-container">
+      <div class="playlist-title">🎵 Playlist</div>
+      <div class="playlist-content" id="playlistContent"></div>
+    </div>
+  </div>
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
